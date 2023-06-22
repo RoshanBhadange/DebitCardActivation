@@ -15,4 +15,5 @@ object readHiveTables {
     val df = spark.sql(s"select * from ${Database}.$TableName where concat(SUBSTR($run_date,7,4),'-',SUBSTR($run_date,4,2),'-',SUBSTR($run_date,0,2)) >= date_sub(current_date(), 45)")
     df
   }
+
 }
