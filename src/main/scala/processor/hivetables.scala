@@ -1,0 +1,5 @@
+package processor
+
+object hivetables {
+
+}
