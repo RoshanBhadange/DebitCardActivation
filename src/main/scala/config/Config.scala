@@ -6,5 +6,6 @@ object Config {
   val targetDb = "prod_hive_pas"
   val dispatchtbl = "dispatch"
   val transtbl = "transactions"
+  val targettbl = "debit_card_activation_insights"
 
 }

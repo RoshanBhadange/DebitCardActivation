@@ -35,7 +35,9 @@ object hivetables {
 
   def dropTable(): Unit = {
     spark.sql("DROP TABLE schema_cms.dispatch")
-   // spark.sql("DROP TABLE transactions")
+    spark.sql("DROP TABLE hive_fcm.transactions")
+    spark.sql("DROP TABLE prod_hive_pas.debit_card_activation_insights")
+
   }
 
 }

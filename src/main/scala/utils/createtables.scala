@@ -45,7 +45,7 @@ object createtables {
      party_id	string,
      brand	string,
      reminder_group	string,
-     card_disptach_date	date)
+     card_disptach_date	string)
      PARTITIONED BY (
      pipeline_execution_date date
      )
