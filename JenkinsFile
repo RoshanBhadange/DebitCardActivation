@@ -5,13 +5,35 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Hello, World!'
+                mvn clean install
             }
         }
         stage('Test') {
             steps {
-                echo 'test'
+                echo 'Unit test'
             }
         }
+        stage ('Run Script') {
+            steps {
+                 echo 'Run spark-submit command'
+                                sh '''
+                                    spark-submit \
+                                        --class src/main/scala/DebitCardActivation.scala \
+                                        --master yarn \
+                                        --deploy-mode client \
+                                        target/DebitCardActivation.jar
+                                '''
+            }
+
+        }
     }
+    post {
+            success {
+                echo 'Pipeline succeeded!'
+            }
+            failure {
+                echo 'Pipeline failed!'
+            }
+        }
 
 }
