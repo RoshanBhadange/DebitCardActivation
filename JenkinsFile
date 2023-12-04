@@ -4,14 +4,14 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+
                     def mvnHome = tool name: MVN_TOOL, type: 'maven'
 
-                    def mvnCleanCmd = "${mvnHome}/bin/mvn clean"
 
-                    sh mvnCleanCmd
+                    def mvnCleanCmd = "C:/Program Files/JetBrains/IntelliJ IDEA Community Edition 2020.2.4/plugins/maven/lib/maven3/bin/mvn clean"
 
 
-                }
+                    sh mvnCleanCmd                }
 
             }
         }
