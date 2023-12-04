@@ -5,10 +5,10 @@ pipeline {
             steps {
                 script {
 
-                    def mvnHome = tool name: MVN-TOOL, type: 'maven'
+                    def mvnHome = tool name: MVN-TOOL type: 'maven'
 
 
-                    def mvnCleanCmd = "C:/Program Files/JetBrains/IntelliJ IDEA Community Edition 2020.2.4/plugins/maven/lib/maven3/bin/mvn clean"
+                    def mvnCleanCmd = "${C:/Program Files/JetBrains/IntelliJ IDEA Community Edition 2020.2.4/plugins/maven/lib/maven3/bin}/mvn clean"
 
 
                     sh mvnCleanCmd                }
