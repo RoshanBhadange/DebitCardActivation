@@ -4,14 +4,14 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Use the 'Maven' tool installation
-                                        def mvnHome = tool name: MVN_TOOL, type: 'maven'
+                    def mvnHome = tool name: MVN_TOOL, type: 'maven'
 
-                                        // Maven 'clean' command
-                                        def mvnCleanCmd = "${mvnHome}/bin/mvn clean"
+                    def mvnCleanCmd = "${mvnHome}/bin/mvn clean"
 
-                                        // Execute Maven 'clean'
-                                        sh mvnCleanCmd
+                    sh mvnCleanCmd
+
+
+                }
 
             }
         }
