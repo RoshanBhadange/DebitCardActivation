@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment{
-    PATH =  C:/Program Files/JetBrains/IntelliJ IDEA Community Edition 2020.2.4/plugins/maven/lib/maven3/bin
+    PATH =  Program Files/JetBrains/IntelliJ IDEA Community Edition 2020.2.4/plugins/maven/lib/maven3/bin
     }
     stages {
         stage('Build') {
