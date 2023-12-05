@@ -1,13 +1,10 @@
 pipeline {
     agent any
-    environment {
-        path = /maven/lib/maven3/bin:$path
-    }
     stages {
         stage('Build') {
             steps {
                 script {
-                    sh 'mvn clean install'
+                    sh '/maven/lib/maven3/bin/mvn clean install'
                 }
 
             }
