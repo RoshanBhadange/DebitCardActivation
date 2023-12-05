@@ -1,13 +1,13 @@
 pipeline {
     agent any
     environment {
-        path = C:/Program Files/JetBrains/IntelliJ IDEA Community Edition 2020.2.4/plugins/maven/lib/maven3/bin:$path
+        path = /maven/lib/maven3/bin:$path
     }
     stages {
         stage('Build') {
             steps {
                 script {
-                    sh "mvn clean install"
+                    sh 'mvn clean install'
                 }
 
             }
