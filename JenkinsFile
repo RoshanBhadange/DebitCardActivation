@@ -5,7 +5,6 @@ pipeline {
             steps {
                 script {
                     sh '/maven/lib/maven3/bin/mvn clean install'
-'
                 }
 
             }
