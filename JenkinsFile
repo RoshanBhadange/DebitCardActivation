@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-            SPARK_HOME = D:\\gnral_soft\\spark3
+            SPARK_HOME = 'D:\\gnral_soft\\spark3'
         }
     tools {
             maven 'Maven-3.6.3'
