@@ -20,7 +20,7 @@ pipeline {
         steps {
              echo 'Run spark-submit command'
                             bat '''
-                                D:\\gnral_soft\\spark3\bin\\spark-submit \
+                                spark-submit \
                                     --class src/main/scala/DebitCardActivation.scala \
                                     --master yarn \
                                     --deploy-mode client \
