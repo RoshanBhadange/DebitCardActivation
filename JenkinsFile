@@ -25,7 +25,7 @@ pipeline {
         steps {
             script {
                 echo 'Run spark-submit command'
-                def sparkSubmitCmd = "${SPARK_HOME}\\bin\\spark-submit --class src.main.scala.DebitCardActivation --master yarn --deploy-mode client --conf spark.yarn.submit.waitAppCompletion=false --conf spark.executor.extraJavaOptions=-Dhdp.version=3.2.0 C:\\Users\\91866\\IdeaProjects\\DebitCardActivation1\\target\\DebitCardActivation.jar"
+                def sparkSubmitCmd = "${SPARK_HOME}\\bin\\spark-submit --class org.talentorigin.DebitCardActivation --master yarn --deploy-mode client --conf spark.yarn.submit.waitAppCompletion=false --conf spark.executor.extraJavaOptions=-Dhdp.version=3.2.0 C:\\Users\\91866\\IdeaProjects\\DebitCardActivation1\\target\\DebitCardActivation.jar"
                 bat sparkSubmitCmd
             }
 
