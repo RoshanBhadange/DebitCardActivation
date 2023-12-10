@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+            SPARK_HOME = D:\\gnral_soft\\spark3
+        }
     tools {
             maven 'Maven-3.6.3'
         }
@@ -19,13 +22,9 @@ pipeline {
     stage ('Run Script') {
         steps {
              echo 'Run spark-submit command'
-                            bat '''
-                                spark-submit \
-                                    --class src/main/scala/DebitCardActivation.scala \
-                                    --master yarn \
-                                    --deploy-mode client \
-                                    C:\\Users\\91866\\IdeaProjects\\DebitCardActivation1\\target\\DebitCardActivation.jar
-                            '''
+
+                            def sparkSubmitCmd = "${SPARK_HOME}\bin\spark-submit --class src.main.scala.DebitCardActivation.scala --master yarn --deploy-mode client C:\\Users\\91866\\IdeaProjects\\DebitCardActivation1\\target\\DebitCardActivation.jar
+                            bat sparkSubmitCmd
         }
 
     }
