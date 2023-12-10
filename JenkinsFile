@@ -24,7 +24,7 @@ pipeline {
                                     --class src/main/scala/DebitCardActivation.scala \
                                     --master yarn \
                                     --deploy-mode client \
-                                    target/DebitCardActivation.jar
+                                    C:\Users\\91866\\IdeaProjects\\DebitCardActivation1\\target\\DebitCardActivation.jar
                             '''
         }
 
