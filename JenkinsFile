@@ -19,7 +19,7 @@ pipeline {
     stage ('Run Script') {
         steps {
              echo 'Run spark-submit command'
-                            sh '''
+                            bat '''
                                 spark-submit \
                                     --class src/main/scala/DebitCardActivation.scala \
                                     --master yarn \
