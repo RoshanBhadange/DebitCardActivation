@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
             SPARK_HOME = 'D:\\gnral_soft\\spark3'
+            HADOOP_CONF_DIR = 'D:\\gnral_soft\\spark3\\conf'
         }
     tools {
             maven 'Maven-3.6.3'
