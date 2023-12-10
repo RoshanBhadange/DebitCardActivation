@@ -23,7 +23,7 @@ pipeline {
         steps {
              echo 'Run spark-submit command'
 
-                            def sparkSubmitCmd = "${SPARK_HOME}\\bin\\spark-submit --class src\main\scala\DebitCardActivation.scala --master yarn --deploy-mode client C:\\Users\\91866\\IdeaProjects\\DebitCardActivation1\\target\\DebitCardActivation.jar"
+                            def sparkSubmitCmd = "${SPARK_HOME}\\bin\\spark-submit --class src.main.scala.DebitCardActivation --master yarn --deploy-mode client C:\\Users\\91866\\IdeaProjects\\DebitCardActivation1\\target\\DebitCardActivation.jar"
                             bat sparkSubmitCmd
         }
 
