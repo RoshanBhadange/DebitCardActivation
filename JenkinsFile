@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    bat 'mvn clean install'
+                    bat 'C:\ProgramData\Jenkins\.jenkins\workspace\develop-debitcard-batch\maven\lib\maven3\bin\mvn clean install'
                 }
 
             }
