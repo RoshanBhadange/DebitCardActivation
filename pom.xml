@@ -33,6 +33,12 @@
             <artifactId>spark-streaming-kafka-0-10_2.12</artifactId>
             <version>3.1.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
     </dependencies>
     <build>
         <resources>
@@ -41,7 +47,7 @@
             </resource>
         </resources>
         <sourceDirectory>src/main/scala</sourceDirectory>>
-        <outputDirectory>targer/scala-$(scala.binary.version)/classes</outputDirectory>>
+        <outputDirectory>target/scala-$(scala.binary.version)/classes</outputDirectory>>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -55,6 +61,7 @@
             <plugin>
                 <groupId>org.scala-tools</groupId>
                 <artifactId>maven-scala-plugin</artifactId>
+                <version>3.6.3</version>
                 <executions>
                     <execution>
                         <goals>
