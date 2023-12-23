@@ -7,7 +7,7 @@ object readHiveTables {
     .master("local")
     .enableHiveSupport()
     .appName("DebitCardActivation")
-    .config("spark.sql.warehouse.dir", "file:C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\develop-debitcard-batch\\spark-warehouse")
+    .config("spark.sql.warehouse.dir", "file:///C:/ProgramData/Jenkins/.jenkins/workspace/develop-debitcard-batch/spark-warehouse")
     .config("hive.exec.dynamic.partition",true)
     .config("hive.exec.dynamic.partition.mode", "nonstrict")
     .getOrCreate()
