@@ -7,7 +7,7 @@ import preprocessing.logic
 object DebitCardActivation extends App{
   // Main Script
   // Create Empty Tables\
-//  hivetables.dropTable()
+// hivetables.dropTable()
   hivetables.createDatabase()
   hivetables.createHiveTables()
   hivetables.load_table_disp()
